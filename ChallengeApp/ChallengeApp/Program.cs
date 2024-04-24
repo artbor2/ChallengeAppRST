@@ -1,59 +1,39 @@
-﻿// liczby całkowite
-int myAge = 120;
-int newAge = myAge + 5;
-Console.WriteLine(newAge); // 125
+﻿var number1 = 5;
+var number2 = 10;
 
-int myInt = int.MaxValue;
-Console.WriteLine("IntMaxValue: " + myInt);
-Console.WriteLine("IntMaxValue + 1: " + (myInt + 1));
+// operatory relacyjne < > <= >= != ==
 
-myInt = int.MinValue;
-Console.WriteLine("IntMinValue: " + myInt);
-Console.WriteLine("IntMinValue - 1: " + (myInt - 1));
+  if (number1 < number2)
+{
+    Console.WriteLine("JESTEM TUTAJ W LINI 6");
+}
+else
+{
+    Console.WriteLine("JESTEN TUTAJ W LINI 10");
+}
 
-uint myUInt = uint.MaxValue;
-Console.WriteLine("Unsigned Int Max: " + myUInt);
-myUInt = uint.MinValue;
-Console.WriteLine("Unsigned Int Min: " + myUInt);
+// operatory logiczne AND (I)  OR (LUB) &&, (Zaprzeczenie, negacja) NOT !
 
-long myLong = long.MaxValue;
-Console.WriteLine("Long maxValue: " + myLong);
-myLong = long.MinValue;
-Console.WriteLine("Long minValue: " + myLong);
+var name = "Adam";
+var age = 33;
 
-ulong myULong = ulong.MaxValue;
-Console.WriteLine("ulong maxValue: " + myULong);
-myULong = ulong.MinValue;
-Console.WriteLine("ulong minValue: " + myULong);
-Console.WriteLine();
+if (name  == "Adam" && age < 50)
+{
+    Console.WriteLine("Adam przed 50 lat");
+} else
+{
+    Console.WriteLine( "Jestem kims innym" );
+}
 
-// liczby zmiennoprzecinkowe
-float myFloat = float.MaxValue;
-Console.WriteLine(myFloat);
-double myDouble = double.MaxValue;
-Console.WriteLine(myDouble);
-decimal myDecimal = decimal.MaxValue;
-Console.WriteLine(myDecimal);
-Console.WriteLine();
+if (name == "Adam" || age < 50)
+{
+    Console.WriteLine("Jestem Adamem lub przed 50 ");
+} else
+{
+    Console.WriteLine("Jestem kims innym");
+}
 
-// zmienne tekstowe
-string name = "Adam";
-string surname = "Kamizelich";
-Console.WriteLine(name + surname);
-Console.WriteLine(name + " " + surname);
-Console.WriteLine("rok " + 20 + 24 ); // Teksty 
-Console.WriteLine("rok " + (2000 + 24));
-Console.WriteLine();
-
-// zmienne znakowe
-char myChar = 'c';
-Console.WriteLine(myChar);
-var result2 = name.ToCharArray();
-Console.WriteLine(result2);
-
-// zmienna logiczna
+// (Zaprzeczenie, negacja) NOT !
 bool isActive = true;
 Console.WriteLine(isActive);
-var isOk = (5 > 6);
-Console.WriteLine(isOk);
-
+Console.WriteLine(!isActive);
