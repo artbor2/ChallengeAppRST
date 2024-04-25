@@ -10,8 +10,7 @@ dayOfWeeks.Add("niedziela");
 Console.WriteLine(dayOfWeeks.Count);
 Console.WriteLine();
 
-for (int i = 0; i < dayOfWeeks.Count; i++)
+foreach (string day in dayOfWeeks)
 {
-    Console.WriteLine(dayOfWeeks[i]);
+    Console.WriteLine(day);
 }
-Console.WriteLine();
