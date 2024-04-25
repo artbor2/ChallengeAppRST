@@ -1,39 +1,27 @@
-﻿var number1 = 5;
-var number2 = 10;
+﻿var age = 55;
+var name = "Adam";
 
-// operatory relacyjne < > <= >= != ==
-
-  if (number1 < number2)
+if (age > 50)
 {
-    Console.WriteLine("JESTEM TUTAJ W LINI 6");
+    if (name == "Adam")
+    {
+        Console.WriteLine("Adam");
+    }
+    else
+    {
+        Console.WriteLine("Nie Adam ?!");
+    }
+    Console.WriteLine(" > 50 lat");
+}
+else if (age > 40)
+{
+    Console.WriteLine("40-50 latek");
+}
+else if (age > 30)
+{
+    Console.WriteLine("30-40 latek");
 }
 else
 {
-    Console.WriteLine("JESTEN TUTAJ W LINI 10");
+    Console.WriteLine("Mniej niż 30 lat");
 }
-
-// operatory logiczne AND (I)  OR (LUB) &&, (Zaprzeczenie, negacja) NOT !
-
-var name = "Adam";
-var age = 33;
-
-if (name  == "Adam" && age < 50)
-{
-    Console.WriteLine("Adam przed 50 lat");
-} else
-{
-    Console.WriteLine( "Jestem kims innym" );
-}
-
-if (name == "Adam" || age < 50)
-{
-    Console.WriteLine("Jestem Adamem lub przed 50 ");
-} else
-{
-    Console.WriteLine("Jestem kims innym");
-}
-
-// (Zaprzeczenie, negacja) NOT !
-bool isActive = true;
-Console.WriteLine(isActive);
-Console.WriteLine(!isActive);
