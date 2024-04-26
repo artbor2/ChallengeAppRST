@@ -4,16 +4,26 @@ User user3 = new User("Zuzia", "2666663436662");
 User user4 = new User("Damian", "2663748445r");
 
 var name = user1.Login;
+user1.AddScore(5);
 
 internal class User
 {
+    private int score;
+
     public User(string login, string password)
     {
         this.Login = login;
         this.Password = password;
+        this.score = 0;
     }
 
     public string Login { get; private set; }
     public string Password { get; private set; }
+
+    public void AddScore(int number)
+    {
+        // this.score = this.score + number;
+        this.score += number;
+    }
 
 }
