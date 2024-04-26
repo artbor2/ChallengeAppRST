@@ -1,35 +1,19 @@
-﻿User user1 = new User("Adam", "");
-User user2 = new User("Monika", "");
-User user3 = new User("Zuzia", "");
-User user4 = new User("Damian", "");
+﻿User user1 = new User("Adam", "3466534t7684");
+User user2 = new User("Monika", "3636272727");
+User user3 = new User("Zuzia", "2666663436662");
+User user4 = new User("Damian", "2663748445r");
 
-// public, protected, internal, private
-// user1.login = "Adam";
+var name = user1.Login;
 
 internal class User
 {
-    private string login;
-    private string password;
-    private string name;
-
-    public User()
-    {
-        this.login = "_";
-        this.password = "_";
-        this.name = "_";
-    }
-
-    public User(string login)
-    {
-        this.login = login;
-        this.password = "_";
-        this.name = "_";
-    }
-
     public User(string login, string password)
     {
-        this.login = login;
-        this.password = password;
-        this.name = "_";
+        this.Login = login;
+        this.Password = password;
     }
+
+    public string Login { get; private set; }
+    public string Password { get; private set; }
+
 }
