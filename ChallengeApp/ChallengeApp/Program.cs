@@ -5,25 +5,33 @@ User user4 = new User("Damian", "2663748445r");
 
 var name = user1.Login;
 user1.AddScore(5);
+user1.AddScore(2);
+var result = user1.Result;
+Console.WriteLine(result);
 
 internal class User
 {
-    private int score;
+    private List<int> scores = new List<int>();
 
     public User(string login, string password)
     {
         this.Login = login;
         this.Password = password;
-        this.score = 0;
     }
 
     public string Login { get; private set; }
     public string Password { get; private set; }
 
-    public void AddScore(int number)
+    public int Result
     {
-        // this.score = this.score + number;
-        this.score += number;
+        get
+        {
+            return this.scores.Sum();
+        }
     }
 
+    public void AddScore(int number)
+    {
+        this.scores.Add(number);
+    }
 }
