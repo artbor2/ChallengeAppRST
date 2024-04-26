@@ -1,33 +1,20 @@
-﻿/* Przygotuj program, który policzy ile jakich cyfr występuje
- * w podanej liczbie.
- *
- * Przykład:
- * Wyniki dla liczby 4566
- * 0 => 0
- * 1 => 0
- * 2 => 0
- * 3 => 0
- * 4 => 1
- * 5 => 1
- * 6 => 2
- * 7 => 0
- * 8 => 0
- * 9 => 0
- */
+﻿User user1 = new User("Adam", "");
+User user2 = new User("Monika", "");
+User user3 = new User("Zuzia", "");
+User user4 = new User("Damian", "");
 
-int number = 4566;
-string numberInString = number.ToString();
-char[] letters = numberInString.ToCharArray();
-int[] digitsStats = new int[10];
-foreach (char c in letters)
-{
-    string digitAsString = c.ToString();
-    int digit = int.Parse(digitAsString);
-    digitsStats[digit]++;
-}
+// public, protected, internal, private
+// user1.login = "Adam";
 
-Console.WriteLine(number);
-for (int i = 0; i < digitsStats.Length; i++)
+internal class User
 {
-    Console.WriteLine(i + " => " + digitsStats[i]);
+    private string login;
+    private string password;
+    private string name;
+
+    public User(string login, string password)
+    {
+        this.login = login;
+        this.password = password;
+    }
 }
