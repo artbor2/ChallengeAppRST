@@ -12,9 +12,24 @@ internal class User
     private string password;
     private string name;
 
+    public User()
+    {
+        this.login = "_";
+        this.password = "_";
+        this.name = "_";
+    }
+
+    public User(string login)
+    {
+        this.login = login;
+        this.password = "_";
+        this.name = "_";
+    }
+
     public User(string login, string password)
     {
         this.login = login;
         this.password = password;
+        this.name = "_";
     }
 }
