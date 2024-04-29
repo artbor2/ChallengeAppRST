@@ -2,7 +2,7 @@
 
 namespace ChallengeApp
 {
-    internal class Employee
+    public class Employee
     {
         private List<float> grades = new List<float>();
         public string Name { get; private set; }
