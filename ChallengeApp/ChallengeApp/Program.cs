@@ -1,17 +1,44 @@
 ﻿using ChallengeApp;
 
-var employee = new Employee("Joe", "Doe");
+int index = 0;
+while (index < 10)
+{
+    if (index == 4)
+    {
+        break;          // end current loop
+    }
+    Console.Write(index + " ");
+    index++;
+}
+Console.WriteLine();
 
-employee.AddGrade("Adam");
-employee.AddGrade("4000");
-employee.AddGrade("-5");
-employee.AddGrade(2);
-employee.AddGrade(6L);
-employee.AddGrade(3.5);
+index = 0;
+while (index < 10)
+{
+   
+    index++;
+    if (index == 4)
+    {
+        continue;       // skip current loop jump to next
+    }
+    Console.Write(index + "  ");
+}
+
+Console.WriteLine();
+
+index = 0;
+while (index < 10)
+{
+
+    
+    if (index == 4)
+    {
+        goto xxxx;  // breaak loop and jump to label
+    }
+    Console.Write(index + "  ");
+    index++;
+}
 
 
-var statistics = employee.GetStatistics();
-Console.WriteLine($"Employee: {employee.Name} {employee.Surname}");
-Console.WriteLine($"Average: {statistics.Average:f2}");
-Console.WriteLine($"Min {statistics.Min}");
-Console.WriteLine($"Max {statistics.Max}");
+xxxx:
+Console.WriteLine("GOHERE");
