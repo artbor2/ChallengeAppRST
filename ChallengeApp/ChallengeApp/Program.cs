@@ -2,9 +2,10 @@
 
 var employee = new Employee("Joe", "Doe");
 
-employee.AddGrade(5);
+employee.AddGrade("Adam");
+employee.AddGrade("4000");
 employee.AddGrade(2);
-employee.AddGrade(1);
+employee.AddGrade(6);
 
 var statistics = employee.GetStatistics();
 Console.WriteLine($"Employee: {employee.Name} {employee.Surname}");
