@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Diagnostics;
+using System.Globalization;
 
 namespace ChallengeApp
 {
@@ -32,13 +33,15 @@ namespace ChallengeApp
             {
                 this.AddGrade(result);
             }
-            else 
+            else
             {
                 Console.WriteLine("Strin in not float");
             }
         }
+
         public void AddGrade(double grade)
-        {   float gradeAsFloat = (float)grade;
+        {
+            float gradeAsFloat = (float)grade;
             this.AddGrade(gradeAsFloat);
         }
 
@@ -54,7 +57,6 @@ namespace ChallengeApp
             this.AddGrade(gradeAsFloat);
         }
 
-
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
@@ -63,6 +65,25 @@ namespace ChallengeApp
                 statistics.Average = 0;
                 statistics.Max = float.MinValue;
                 statistics.Min = float.MaxValue;
+
+                //var index = 0;
+                //while (index < this.grades.Count)
+                //{
+                //    statistics.Max = Math.Max(statistics.Max, grades[index]);
+                //    statistics.Min = Math.Min(statistics.Min, grades[index]);
+                //    statistics.Average += grades[index];
+                //    index++;
+                //}
+
+                // var index = 0;
+
+                //do
+                //{
+                //    statistics.Max = Math.Max(statistics.Max, grades[index]);
+                //    statistics.Min = Math.Min(statistics.Min, grades[index]);
+                //    statistics.Average += grades[index];
+                //    index++;
+                //} while (index < this.grades.Count);
 
                 foreach (var grade in this.grades)
                 {
