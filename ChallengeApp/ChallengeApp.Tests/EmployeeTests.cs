@@ -135,5 +135,36 @@
             Assert.AreEqual(3f, result.Average);
         }
 
+        [Test]
+        public void Employee_AddGrade_AsDouble()
+        {
+            // arrange
+            var employee = new Employee("", "");
+            employee.AddGrade(5.5D);
+            employee.AddGrade(1.5D);
+            employee.AddGrade(2.0D);
+
+            // act
+            var result = employee.GetStatistics();
+
+            // assert
+            Assert.AreEqual(3f, result.Average);
+        }
+
+        [Test]
+        public void Employee_AddGrade_AsLong()
+        {
+            // arrange
+            var employee = new Employee("", "");
+            employee.AddGrade(5L);
+            employee.AddGrade(2L);
+            employee.AddGrade(2L);
+
+            // act
+            var result = employee.GetStatistics();
+
+            // assert
+            Assert.AreEqual(3f, result.Average);
+        }
     }
 }

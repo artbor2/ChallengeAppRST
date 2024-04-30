@@ -37,6 +37,22 @@ namespace ChallengeApp
                 Console.WriteLine("Strin in not float");
             }
         }
+        public void AddGrade(double grade)
+        {   float gradeAsFloat = (float)grade;
+            this.AddGrade(gradeAsFloat);
+        }
+
+        public void AddGrade(long grade)
+        {
+            float gradeAsFloat = (float)grade;
+            this.AddGrade(gradeAsFloat);
+        }
+
+        public void AddGrade(int grade)
+        {
+            float gradeAsFloat = (float)grade;
+            this.AddGrade(gradeAsFloat);
+        }
 
 
         public Statistics GetStatistics()
