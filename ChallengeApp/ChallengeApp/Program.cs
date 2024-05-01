@@ -1,44 +1,38 @@
 ﻿using ChallengeApp;
 
-int index = 0;
-while (index < 10)
-{
-    if (index == 4)
-    {
-        break;          // end current loop
-    }
-    Console.Write(index + " ");
-    index++;
-}
-Console.WriteLine();
+var employee = new Employee("Joe", "Doe");
 
-index = 0;
-while (index < 10)
-{
-   
-    index++;
-    if (index == 4)
-    {
-        continue;       // skip current loop jump to next
-    }
-    Console.Write(index + "  ");
-}
-
-Console.WriteLine();
-
-index = 0;
-while (index < 10)
-{
-
-    
-    if (index == 4)
-    {
-        goto xxxx;  // breaak loop and jump to label
-    }
-    Console.Write(index + "  ");
-    index++;
-}
+employee.AddGrade("Adam");
+employee.AddGrade("4000");
+employee.AddGrade("-5");
+employee.AddGrade(2);
+employee.AddGrade(6L);
+employee.AddGrade(3.5);
 
 
-xxxx:
-Console.WriteLine("GOHERE");
+var statistics = employee.GetStatistics();
+var statistics1 = employee.GetStatisticsWithForEach();
+var statistics2 = employee.GetStatisticsWithFor();
+var statistics3 = employee.GetStatisticsWithDoWhile();
+var statistics4 = employee.GetStatisticsWithWhile();
+
+Console.WriteLine($"Employee: {employee.Name} {employee.Surname}");
+Console.WriteLine($"Average: {statistics.Average:f2}");
+Console.WriteLine($"Min {statistics.Min}");
+Console.WriteLine($"Max {statistics.Max}");
+
+Console.WriteLine($"Average: {statistics1.Average:f2}");
+Console.WriteLine($"Min {statistics1.Min}");
+Console.WriteLine($"Max {statistics1.Max}");
+
+Console.WriteLine($"Average: {statistics2.Average:f2}");
+Console.WriteLine($"Min {statistics2.Min}");
+Console.WriteLine($"Max {statistics2.Max}");
+
+Console.WriteLine($"Average: {statistics3.Average:f2}");
+Console.WriteLine($"Min {statistics3.Min}");
+Console.WriteLine($"Max {statistics3.Max}");
+
+Console.WriteLine($"Average: {statistics4.Average:f2}");
+Console.WriteLine($"Min {statistics4.Min}");
+Console.WriteLine($"Max {statistics4.Max}");
