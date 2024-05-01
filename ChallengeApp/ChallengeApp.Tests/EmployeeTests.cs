@@ -86,7 +86,6 @@
             Assert.AreEqual(0, result.Max);
         }
 
-
         [Test]
         public void Employee_AddGrade_zeroing_value()
         {
