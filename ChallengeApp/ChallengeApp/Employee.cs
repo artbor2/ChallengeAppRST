@@ -32,7 +32,7 @@
             }
             else
             {
-                Console.WriteLine("Strin in not float");
+                Console.WriteLine("String in not float");
             }
         }
 
