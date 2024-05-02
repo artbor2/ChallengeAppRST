@@ -24,15 +24,36 @@
             }
         }
 
+        private bool CharLetter(string grade)
+        {
+
+            string[] letters = { "A", "B", "C", "D","E" ,"a", "b", "c", "d", "e" };
+            foreach(string l in letters)
+            {
+                if (l ==  grade)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public void AddGrade(string grade)
         {
-            if (float.TryParse(grade, out float result))
+            if((grade.Length < 2) && CharLetter(grade))
             {
-                this.AddGrade(result);
-            }
-            else
+                char gradeAsChar = grade.ToUpper().ToCharArray()[0];
+                this.AddGrade(gradeAsChar);
+            } else
             {
-                Console.WriteLine("String in not float");
+                if (float.TryParse(grade, out float result))
+                {
+                    this.AddGrade(result);
+                }
+                else
+                {
+                    Console.WriteLine("String in not float");
+                }
             }
         }
 
@@ -72,6 +93,9 @@
                     break;
                 case 'E':
                     this.grades.Add(20);
+                    break;
+                case 'F':
+                    this.grades.Add(0);
                     break;
                 default:
                     Console.WriteLine("Wrong Letter");
